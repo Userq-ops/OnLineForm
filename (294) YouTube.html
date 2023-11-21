@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stule.css">
+  <title>Онлайн опросы и анализы данных</title>
+  <style>
+    * {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+    body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #23262e;;
+}
+
+header {
+    background-color: #202124;    
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.content {
+    padding: 20px;
+    color: rgb(233, 233, 233);
+    font-size: 24px;
+    padding-left: 80px;
+}
+
+.login {
+  float: inline-end;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.login:hover {
+  float: inline-end;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+  color: rgb(0, 255, 0);
+  height: 30px;
+  cursor: pointer;
+}
+
+.register {
+  float: inline-end;
+  background-color: rgb(0, 147, 0);
+  color: white;
+  border: none;
+  width: 130px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.register:hover {
+  float: inline-end;
+  background-color: rgb(0, 198, 0);
+  color: white;
+  border: none;
+  width: 130px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.register-content {
+  float: inline-end;
+  background-color: rgb(0, 147, 0);
+  color: white;
+  font-size: 20px;
+  border: none;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.register-content:hover {
+  float: inline-end;
+  background-color: rgb(0, 198, 0);
+  color: white;
+  font-size: 20px;
+  border: none;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #202124; 
+        transform: translateY(-20px);
+        transition: opacity 0.3s, transform 0.3s;
+        list-style: none;
+    }
+
+    .nav-links.show {
+        display: block;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-links.hide {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .burger-menu {
+        display: block;
+        z-index: 1;
+    }
+
+    .login {
+  float: inline-end;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+  font-size: 10px;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.login:hover {
+  float: inline-end;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+  color: rgb(0, 255, 0);
+  height: 30px;
+  cursor: pointer;
+}
+
+.register {
+  float: inline-end;
+  background-color: rgb(0, 147, 0);
+  color: white;
+  font-size: 10px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.register:hover {
+  float: inline-end;
+  background-color: rgb(0, 198, 0);
+  color: white;
+  border: none;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.register-content {
+  float: inline-end;
+  background-color: rgb(0, 147, 0);
+  color: white;
+  font-size: 20px;
+  border: none;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.register-content:hover {
+  float: inline-end;
+  background-color: rgb(0, 198, 0);
+  color: white;
+  font-size: 20px;
+  border: none;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.content {
+  padding: 20px;
+  color: rgb(233, 233, 233);
+  font-size: 13px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">OneLineForm
+        <button class="register">Регистрация</button>
+        <button class="login">Войти</button>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <div class="burger-menu">&#9776;</div>
+    </nav>
+</header>
+
+<div class="content">
+    <h1>Пройдите быструю регистрацию</h1>
+    <h1>и проходите опросы</h1>
+    <br>
+        <button class="register-content" style="float: inline-start;">Регистрация</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navLinks = document.querySelector('.nav-links');
+  
+    burgerMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+        if(navLinks.classList.contains('show')) {
+            navLinks.style.transform = "translateY(0)";
+        } else {
+            navLinks.style.transform = "translateY(-500%)";
+        }
+    });
+});
+
+    
+
+
+    // Здесь вы можете добавить дополнительные функции и взаимодействие с контентом страницы
+</script>
+</body>
+</html>
